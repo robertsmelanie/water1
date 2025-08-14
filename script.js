@@ -20,5 +20,6 @@ function calculateWater() {
     else if (activity === "high") intakeMl += 1000;
 
     const intakeLiters = (intakeMl / 1000).toFixed(2);
-    result.textContent = `You should drink approximately ${intakeLiters} liters of water per day.`;
+    const intakeOz = (intakeMl * 0.033814).toFixed(2);
+    result.textContent = `You should drink approximately ${intakeLiters} liters (${intakeOz} ounces) of water per day.`;
 }
